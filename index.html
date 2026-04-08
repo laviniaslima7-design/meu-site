@@ -10,12 +10,9 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{
-background:#f1f5f4;
-color:#333;
-}
+body{background:#f1f5f4;color:#333;}
 
-/* HERO PREMIUM */
+/* HERO */
 header{
 height:100vh;
 display:flex;
@@ -27,21 +24,13 @@ color:white;
 
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1556228720-195a672e8a03');
+url('https://images.unsplash.com/photo-1612817159949-195b6eb9b4a0');
 background-size:cover;
 background-position:center;
 }
 
-header h1{
-font-size:48px;
-font-weight:600;
-}
-
-header p{
-margin:20px 0;
-font-size:18px;
-max-width:500px;
-}
+header h1{font-size:48px;}
+header p{margin:20px 0;font-size:18px;}
 
 .btn{
 background:#52b788;
@@ -49,32 +38,12 @@ padding:14px 28px;
 border-radius:30px;
 color:white;
 text-decoration:none;
-transition:0.3s;
 }
-.btn:hover{background:#40916c;}
 
 /* SECTIONS */
-section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-}
+section{padding:80px 20px;max-width:1100px;margin:auto;}
+h2{text-align:center;margin-bottom:40px;color:#1b4332;}
 
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#1b4332;
-}
-
-/* SOBRE */
-.sobre{
-text-align:center;
-max-width:700px;
-margin:auto;
-font-size:16px;
-}
-
-/* SERVIÇOS */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -82,31 +51,13 @@ gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
+background:white;
 padding:25px;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-/* DEPOIMENTOS */
-.depo{
-font-style:italic;
 }
 
 /* FORM */
-form{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
 form input, form select{
 width:100%;
 padding:14px;
@@ -122,24 +73,7 @@ padding:14px;
 border:none;
 border-radius:10px;
 width:100%;
-font-size:16px;
 cursor:pointer;
-}
-
-button:hover{background:#081c15;}
-
-.success{
-display:none;
-margin-top:15px;
-background:#d8f3dc;
-padding:15px;
-border-radius:10px;
-text-align:center;
-}
-
-/* CONTATO */
-.contato{
-text-align:center;
 }
 
 /* FOOTER */
@@ -150,7 +84,6 @@ text-align:center;
 padding:20px;
 }
 
-/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -161,7 +94,6 @@ border-radius:50%;
 color:white;
 font-size:22px;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -170,14 +102,14 @@ box-shadow:0 5px 15px rgba(0,0,0,0.2);
 
 <header>
 <h1>Lavínia Silva</h1>
-<p>Especialista em podologia clínica, cuidando da saúde e bem-estar dos seus pés com excelência.</p>
+<p>Especialista em podologia clínica, cuidando da saúde dos seus pés com excelência.</p>
 <a href="#agendamento" class="btn">Agendar Consulta</a>
 </header>
 
 <section>
 <h2>Sobre Mim</h2>
-<p class="sobre">
-Sou podóloga especializada em tratamentos clínicos dos pés, oferecendo atendimento seguro, higiênico e personalizado em Descoberto - MG. Meu compromisso é proporcionar conforto, saúde e qualidade de vida para cada cliente.
+<p style="text-align:center;">
+Sou podóloga especializada em cuidados com os pés, oferecendo tratamentos seguros, higiênicos e personalizados em Descoberto - MG.
 </p>
 </section>
 
@@ -192,27 +124,14 @@ Sou podóloga especializada em tratamentos clínicos dos pés, oferecendo atendi
 </div>
 </section>
 
-<section>
-<h2>Depoimentos</h2>
-<div class="grid">
-<div class="card depo">“Atendimento impecável, super profissional!”</div>
-<div class="card depo">“Ambiente limpo e atendimento excelente.”</div>
-<div class="card depo">“Melhor podóloga da região!”</div>
-</div>
-</section>
-
 <section id="agendamento">
 <h2>Agendamento</h2>
 
-<form id="form" action="https://formsubmit.co/lasilva79@outlook.com" method="POST">
+<form id="form">
+<input type="text" id="nome" placeholder="Nome completo" required>
+<input type="tel" id="telefone" placeholder="Telefone" required>
 
-<input type="hidden" name="_next" value="https://laviniaslima7-design.github.io/meu-site/#agendamento">
-<input type="hidden" name="_captcha" value="false">
-
-<input type="text" name="Nome" placeholder="Nome completo" required>
-<input type="tel" name="Telefone" placeholder="Telefone" required>
-
-<select name="Procedimento">
+<select id="procedimento">
 <option>Unha inflamada</option>
 <option>Unha encravada</option>
 <option>Calos e calosidades</option>
@@ -220,17 +139,15 @@ Sou podóloga especializada em tratamentos clínicos dos pés, oferecendo atendi
 <option>Órtese</option>
 </select>
 
-<input type="date" name="Data" required>
-<input type="time" name="Horario" required>
+<input type="date" id="data" required>
+<input type="time" id="hora" required>
 
-<button type="submit">Confirmar Agendamento</button>
-
-<div class="success" id="msg">Agendamento enviado com sucesso! ✅</div>
-
+<button type="submit">Agendar pelo WhatsApp</button>
 </form>
+
 </section>
 
-<section class="contato">
+<section style="text-align:center;">
 <h2>Contato</h2>
 <p>(32) 9 9801-6614</p>
 <p>@laviniapodologa</p>
@@ -247,8 +164,20 @@ Sou podóloga especializada em tratamentos clínicos dos pés, oferecendo atendi
 <a class="whatsapp" href="https://wa.me/5532998016614">💬</a>
 
 <script>
-document.getElementById('form').addEventListener('submit', function(){
-document.getElementById('msg').style.display = 'block';
+document.getElementById("form").addEventListener("submit", function(e){
+e.preventDefault();
+
+let nome = document.getElementById("nome").value;
+let telefone = document.getElementById("telefone").value;
+let procedimento = document.getElementById("procedimento").value;
+let data = document.getElementById("data").value;
+let hora = document.getElementById("hora").value;
+
+let mensagem = `Olá, gostaria de agendar:\n\nNome: ${nome}\nTelefone: ${telefone}\nProcedimento: ${procedimento}\nData: ${data}\nHorário: ${hora}`;
+
+let url = `https://wa.me/5532998016614?text=${encodeURIComponent(mensagem)}`;
+
+window.open(url, "_blank");
 });
 </script>
 
