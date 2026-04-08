@@ -5,110 +5,163 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Podóloga Lavínia Silva</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background:#f1f5f4;
+color:#333;
 }
 
-body {
-    background: #f5f7f6;
-    color: #333;
+/* HERO PREMIUM */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1556228720-195a672e8a03');
+background-size:cover;
+background-position:center;
 }
 
-/* HERO */
-header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1588776814546-ec7e2f9e3f0f');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+header h1{
+font-size:48px;
+font-weight:600;
 }
 
-header h1 {
-    font-size: 40px;
+header p{
+margin:20px 0;
+font-size:18px;
+max-width:500px;
 }
 
-header p {
-    margin: 15px 0;
-    font-size: 18px;
+.btn{
+background:#52b788;
+padding:14px 28px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+transition:0.3s;
 }
-
-.btn {
-    background: #52b788;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-}
+.btn:hover{background:#40916c;}
 
 /* SECTIONS */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-h2 {
-    color: #2d6a4f;
-    margin-bottom: 20px;
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#1b4332;
 }
 
-/* CARDS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+/* SOBRE */
+.sobre{
+text-align:center;
+max-width:700px;
+margin:auto;
+font-size:16px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+/* SERVIÇOS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* DEPOIMENTOS */
+.depo{
+font-style:italic;
 }
 
 /* FORM */
-form input, form select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-button {
-    background: #2d6a4f;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
+form input, form select{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+button{
+background:#1b4332;
+color:white;
+padding:14px;
+border:none;
+border-radius:10px;
+width:100%;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{background:#081c15;}
+
+.success{
+display:none;
+margin-top:15px;
+background:#d8f3dc;
+padding:15px;
+border-radius:10px;
+text-align:center;
+}
+
+/* CONTATO */
+.contato{
+text-align:center;
 }
 
 /* FOOTER */
-footer {
-    background: #1b4332;
-    color: white;
-    text-align: center;
-    padding: 20px;
+footer{
+background:#081c15;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 /* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    padding: 15px;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+padding:16px;
+border-radius:50%;
+color:white;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -116,79 +169,88 @@ footer {
 <body>
 
 <header>
-    <h1>Podóloga Lavínia Silva</h1>
-    <p>Cuidando da saúde dos seus pés com segurança e profissionalismo</p>
-    <a href="#agendamento" class="btn">Agendar Atendimento</a>
+<h1>Lavínia Silva</h1>
+<p>Especialista em podologia clínica, cuidando da saúde e bem-estar dos seus pés com excelência.</p>
+<a href="#agendamento" class="btn">Agendar Consulta</a>
 </header>
 
 <section>
-    <h2>Sobre Mim</h2>
-    <p>Sou podóloga especializada em cuidados com os pés, oferecendo tratamentos seguros, higiênicos e personalizados. Atendo em Descoberto - MG, com foco em aliviar dores e melhorar a saúde dos seus pés.</p>
+<h2>Sobre Mim</h2>
+<p class="sobre">
+Sou podóloga especializada em tratamentos clínicos dos pés, oferecendo atendimento seguro, higiênico e personalizado em Descoberto - MG. Meu compromisso é proporcionar conforto, saúde e qualidade de vida para cada cliente.
+</p>
 </section>
 
 <section>
-    <h2>Tratamentos</h2>
-    <div class="grid">
-        <div class="card">Unha inflamada</div>
-        <div class="card">Unha encravada</div>
-        <div class="card">Calos e calosidades</div>
-        <div class="card">Rachaduras e fissuras</div>
-        <div class="card">Órtese para correção da unha</div>
-    </div>
+<h2>Tratamentos</h2>
+<div class="grid">
+<div class="card">Unha inflamada</div>
+<div class="card">Unha encravada</div>
+<div class="card">Calos e calosidades</div>
+<div class="card">Rachaduras e fissuras</div>
+<div class="card">Órtese corretiva</div>
+</div>
 </section>
 
 <section>
-    <h2>Feedback de Clientes</h2>
-    <div class="grid">
-        <div class="card">"Atendimento excelente!"</div>
-        <div class="card">"Muito profissional."</div>
-        <div class="card">"Resolveu minha dor rapidamente."</div>
-    </div>
+<h2>Depoimentos</h2>
+<div class="grid">
+<div class="card depo">“Atendimento impecável, super profissional!”</div>
+<div class="card depo">“Ambiente limpo e atendimento excelente.”</div>
+<div class="card depo">“Melhor podóloga da região!”</div>
+</div>
 </section>
 
 <section id="agendamento">
-    <h2>Agendamento</h2>
+<h2>Agendamento</h2>
 
-    <form action="https://formsubmit.co/lasilva79@outlook.com" method="POST">
+<form id="form" action="https://formsubmit.co/lasilva79@outlook.com" method="POST">
 
-        <!-- Redireciona para o próprio site -->
-        <input type="hidden" name="_next" value="https://SEUUSUARIO.github.io/">
+<input type="hidden" name="_next" value="https://laviniaslima7-design.github.io/meu-site/#agendamento">
+<input type="hidden" name="_captcha" value="false">
 
-        <!-- Evita captcha -->
-        <input type="hidden" name="_captcha" value="false">
+<input type="text" name="Nome" placeholder="Nome completo" required>
+<input type="tel" name="Telefone" placeholder="Telefone" required>
 
-        <input type="text" name="Nome" placeholder="Nome completo" required>
-        <input type="tel" name="Telefone" placeholder="Telefone" required>
+<select name="Procedimento">
+<option>Unha inflamada</option>
+<option>Unha encravada</option>
+<option>Calos e calosidades</option>
+<option>Rachaduras</option>
+<option>Órtese</option>
+</select>
 
-        <select name="Procedimento">
-            <option>Unha inflamada</option>
-            <option>Unha encravada</option>
-            <option>Calos e calosidades</option>
-            <option>Rachaduras</option>
-            <option>Órtese</option>
-        </select>
+<input type="date" name="Data" required>
+<input type="time" name="Horario" required>
 
-        <input type="date" name="Data" required>
-        <input type="time" name="Horario" required>
+<button type="submit">Confirmar Agendamento</button>
 
-        <button type="submit">Agendar</button>
-    </form>
+<div class="success" id="msg">Agendamento enviado com sucesso! ✅</div>
+
+</form>
 </section>
 
-<section>
-    <h2>Contato</h2>
-    <p><strong>Telefone:</strong> (32) 9 9801-6614</p>
-    <p><strong>Instagram:</strong> @laviniapodologa</p>
-    <p><strong>Endereço:</strong> Praça Cabo Teixeira, nº 172 - Descoberto MG</p>
+<section class="contato">
+<h2>Contato</h2>
+<p>(32) 9 9801-6614</p>
+<p>@laviniapodologa</p>
+<p>Praça Cabo Teixeira, nº 172 - Descoberto MG</p>
 
-    <a class="btn" href="https://wa.me/5532998016614">Falar no WhatsApp</a>
+<br>
+<a class="btn" href="https://wa.me/5532998016614">Falar no WhatsApp</a>
 </section>
 
 <footer>
-    <p>© 2026 Podóloga Lavínia Silva</p>
+<p>© 2026 Lavínia Silva - Podologia</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5532998016614">💬</a>
+
+<script>
+document.getElementById('form').addEventListener('submit', function(){
+document.getElementById('msg').style.display = 'block';
+});
+</script>
 
 </body>
 </html>
